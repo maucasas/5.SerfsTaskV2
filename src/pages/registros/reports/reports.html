@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            Registros
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <h3 padding>Publicadores Grupo: {{numGrupo}}</h3>
+        <button ion-item *ngFor="let item of getNumGroup(3)" (click)="presentModal(item)">
+                <ion-icon name="contact" item-start></ion-icon>
+          {{ item.Nombre}}
+        </button>
+    </ion-list>
+
+
+    <ion-fab bottom right>
+        <button ion-fab (click)="AddNewPub()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+
+
+</ion-content>

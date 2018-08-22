@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            Nuevos Publicadores
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <img src="../../assets/imgs/pendientes.jpg">
+    <ion-list>
+        <button ion-item *ngFor="let item of nuevosPublicadores" (click)="verNuevo(item)">
+                  {{ item.Nombre }}
+                </button>
+    </ion-list>
+</ion-content>

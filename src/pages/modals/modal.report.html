@@ -1,0 +1,103 @@
+<ion-header>
+    <ion-navbar color="primary">
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-only>
+            <ion-icon name="contact"></ion-icon>
+        </button>
+            </ion-col>
+            <ion-col>
+                <ion-title type="text" class="text">
+                    Formulario Informe
+                </ion-title>
+                <ion-row>
+                    <h5>
+                        {{publicador.Nombre | uppercase}} {{publicador.Apellido | uppercase}}
+                    </h5>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-list>
+        <form [formGroup]="form" (ngSubmit)="saveData()">
+            <ion-item>
+                <ion-icon name="book" item-start></ion-icon>
+                <ion-label floating>Publicaciones</ion-label>
+                <ion-input type="number" formControlName="publicaciones" [disabled]="tagSend == true"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="videocam" item-start></ion-icon>
+                <ion-label floating>Videos</ion-label>
+                <ion-input type="number" formControlName="videos" [disabled]="tagSend == true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="time" item-start></ion-icon>
+                <ion-label floating>Horas</ion-label>
+                <ion-input type="number" formControlName="horas" [disabled]="tagSend == true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="people" item-start></ion-icon>
+                <ion-label floating>Revisitas</ion-label>
+                <ion-input type="number" formControlName="revisitas" [disabled]="tagSend == true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="create" item-start></ion-icon>
+                <ion-label floating>Estudios</ion-label>
+                <ion-input type="number" formControlName="estudios" [disabled]="tagSend == true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="glasses" item-start></ion-icon>
+                <ion-label floating>Observaciones</ion-label>
+                <ion-input type="text" formControlName="observaciones" [disabled]="tagSend == true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <button ion-button block type="submit" [disabled]="form.invalid || tagSend == true">
+                <ion-icon name="star" padding></ion-icon>
+                Guardar informe
+                </button>
+            </ion-item>
+        </form>
+    </ion-list>
+
+
+
+
+
+
+    <button></button>
+    <ion-grid>
+        <ion-row item-width="100%" class="text card-title-ios-primary"> HISTORAL DE INFORMES</ion-row>
+        <ion-row>
+            <ion-col>
+                hace dos meses
+            </ion-col>
+            <ion-col>
+                mes anterior
+            </ion-col>
+            <ion-col>
+                ultimo mes
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                30
+            </ion-col>
+            <ion-col>
+                40
+            </ion-col>
+            <ion-col>
+                50
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>>
