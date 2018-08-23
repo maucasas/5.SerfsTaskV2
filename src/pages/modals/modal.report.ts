@@ -2,6 +2,7 @@ import { Component } from "../../../node_modules/@angular/core";
 import { NavController, NavParams } from 'ionic-angular';
 import { IPublicador } from '../../models/publicador.model';
 import { FormBuilder, FormGroup, Validators } from "../../../node_modules/@angular/forms";
+import { ReportByGroups } from '../registros/reports/reports';
 
 @Component({
     selector: 'page-Modal',
@@ -21,26 +22,26 @@ this.form = this.createForm();
 
 
 }
-    goBack() {
-      this.navCtrl.pop();
+    goBack(tag: boolean) {
+        this.navCtrl.push(ReportByGroups , {tag});
     }
 
 saveData() {
     console.log(this.form.value);
     this.tagSend = true;
 }
-    private createForm(){
-        return this.formBuilder.group(
-            {
-                id:[this.publicador.Id, Validators.required],
-                publicaciones:['', Validators.required],
-                videos: ['', Validators.required],
-                horas: ['', Validators.required],
-                revisitas: ['', Validators.required],
-                estudios: ['', Validators.required],
-                observaciones: ['', Validators.required]
-            }
-        );
+private createForm(){
+    return this.formBuilder.group(
+        {
+            id:[this.publicador.Id, Validators.required],
+            publicaciones:['', Validators.required],
+            videos: ['', Validators.required],
+            horas: ['', Validators.required],
+            revisitas: ['', Validators.required],
+            estudios: ['', Validators.required],
+            observaciones: ['', Validators.required]
+            
+        });
     }
     
 }

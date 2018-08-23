@@ -18,8 +18,6 @@
                 </ion-row>
             </ion-col>
         </ion-row>
-
-
     </ion-navbar>
 </ion-header>
 
@@ -60,7 +58,7 @@
                 <ion-input type="text" formControlName="observaciones" [disabled]="tagSend == true"></ion-input>
             </ion-item>
             <ion-item>
-                <button ion-button block type="submit" [disabled]="form.invalid || tagSend == true">
+                <button ion-button navPop block type="submit" [disabled]="form.invalid || tagSend == true">
                 <ion-icon name="star" padding></ion-icon>
                 Guardar informe
                 </button>

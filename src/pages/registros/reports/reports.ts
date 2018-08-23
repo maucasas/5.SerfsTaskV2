@@ -27,8 +27,8 @@ export class ReportByGroups {
     presentModal(pub: IPublicador) {
        this.navCtrl.push(ModalReports, {publicador: pub});
       }
-      AddNewPub(){
+    AddNewPub(){
           this.navCtrl.push(AgregarNuevo);
-      }
+    }
 
 }
