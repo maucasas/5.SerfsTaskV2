@@ -32,7 +32,7 @@ export class PublicadorService {
             fechaDedicacion: new Date()
         } 
         
-    public listaPublicadores: IPublicador []= [];
+public listaPublicadores: IPublicador []= [];
     constructor() {
        const newPub = new Publicadormodel(
            this.nuevoPublicador1.code, 
