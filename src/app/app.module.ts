@@ -22,6 +22,7 @@ import { LoginPage } from '../pages/login/login.component'
 
 import { PublicadorService } from '../services/publicador.services';
 import { GroupsService } from '../services/groups.services';
+import { DataNeedService }  from '../services/dataNeedService';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { GroupsService } from '../services/groups.services';
     SplashScreen,
     PublicadorService,
     GroupsService,
+    DataNeedService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

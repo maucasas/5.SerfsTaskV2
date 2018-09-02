@@ -8,15 +8,17 @@ import { FormBuilder, FormGroup, Validators } from "../../../node_modules/@angul
     templateUrl: 'modal.report.html'
 })
 
-export class ModalReports {1
+export class ModalReports {
 
     publicador: IPublicador;
     form: FormGroup;
     tagSend = false;
+    month: string;
     
 constructor(private navCtrl: NavController, private navParams: NavParams, public formBuilder: FormBuilder) {
 this.publicador= this.navParams.get('publicador');
-console.log(this.publicador);
+this.month = this.navParams.get('monthActual')
+console.log(this.publicador, this.month);
 this.form = this.createForm();
 
 
